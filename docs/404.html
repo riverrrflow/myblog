@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Categories - Jane - A super concise theme for Hugo</title>
+  <title>404 page not found - Jane - A super concise theme for Hugo</title>
   
 
 <meta name="renderer" content="webkit" />
@@ -34,8 +34,7 @@
 <meta name="generator" content="Hugo 0.53" />
 
 
-<link rel="canonical" href="http://riverrrflow.github.io/categories/" />
-<link href="http://riverrrflow.github.io/categories/index.xml" rel="alternate" type="application/rss+xml" title="Jane - A super concise theme for Hugo" />
+<link rel="canonical" href="" />
 
 
 
@@ -57,16 +56,16 @@
 
 
 
-<meta property="og:title" content="Categories" />
+<meta property="og:title" content="404 Page not found" />
 <meta property="og:description" content="Hugo theme jane example site." />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="http://riverrrflow.github.io/categories/" />
+<meta property="og:url" content="" />
 
-<meta itemprop="name" content="Categories">
+<meta itemprop="name" content="404 Page not found">
 <meta itemprop="description" content="Hugo theme jane example site.">
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Categories"/>
+<meta name="twitter:title" content="404 Page not found"/>
 <meta name="twitter:description" content="Hugo theme jane example site."/>
 
 <!--[if lte IE 9]>
@@ -256,7 +255,7 @@
 
       </li>
     
-        <li class="menu-item active">
+        <li class="menu-item">
         
           
           
@@ -301,14 +300,20 @@
       <div class="content-wrapper">
         <div id="content" class="content container">
           
-  
-  
-  
-  
-
-  
-  
-
+<div class="not-found">
+  <h1 class="error-emoji"></h1>
+  <p class="error-text">/* 404 page not found. */</p>
+  <p class="error-link"><a href="/">↑ Back Home ↑</a></p>
+</div>
+<script>
+  var errorEmojiContainer = document.getElementsByClassName('error-emoji')[0];
+  var emojiArray = [
+    '\\(o_o)/', '(o^^)o', '(˚Δ˚)b', '(^-^*)', '(≥o≤)', '(^_^)b', '(·_·)',
+    '(=\'X\'=)', '(>_<)', '(;-;)', '\\(^Д^)/',
+  ];
+  var errorEmoji = emojiArray[Math.floor(Math.random() * emojiArray.length)];
+  errorEmojiContainer.appendChild(document.createTextNode(errorEmoji));
+</script>
 
         </div>
       </div>

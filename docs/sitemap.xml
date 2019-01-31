@@ -1,36 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<?xml-stylesheet type="text/xsl" href="http://riverrrflow.github.io/sitemap.xsl"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://riverrrflow.github.io/post/first/</loc>
-    <lastmod>2019-01-31T20:27:20+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://riverrrflow.github.io/about/</loc>
-    <lastmod>2019-01-31T20:25:28+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://riverrrflow.github.io/categories/</loc>
+    <loc>http://riverrrflow.github.io/categories/</loc>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://riverrrflow.github.io/</loc>
-    <lastmod>2019-01-31T20:27:20+08:00</lastmod>
+    <loc>http://riverrrflow.github.io/</loc>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://riverrrflow.github.io/post/</loc>
-    <lastmod>2019-01-31T20:27:20+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://riverrrflow.github.io/tags/</loc>
+    <loc>http://riverrrflow.github.io/tags/</loc>
+    <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   

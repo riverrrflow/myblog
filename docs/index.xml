@@ -1,33 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My New Hugo Site</title>
-    <link>https://riverrrflow.github.io/</link>
-    <description>Recent content on My New Hugo Site</description>
+    <title>Jane - A super concise theme for Hugo</title>
+    <link>http://riverrrflow.github.io/</link>
+    <description>Recent content on Jane - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 31 Jan 2019 20:27:20 +0800</lastBuildDate>
+    <language>en</language>
     
-	<atom:link href="https://riverrrflow.github.io/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://riverrrflow.github.io/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>First</title>
-      <link>https://riverrrflow.github.io/post/first/</link>
-      <pubDate>Thu, 31 Jan 2019 20:27:20 +0800</pubDate>
-      
-      <guid>https://riverrrflow.github.io/post/first/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>https://riverrrflow.github.io/about/</link>
-      <pubDate>Thu, 31 Jan 2019 20:25:28 +0800</pubDate>
-      
-      <guid>https://riverrrflow.github.io/about/</guid>
-      <description>tttttttttt</description>
-    </item>
     
   </channel>
 </rss>
