@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Java on river&#39;s blog</title>
+    <link>http://riverrrflow.github.io/myblog/categories/java/</link>
+    <description>Recent content in Java on river&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 10 Jul 2015 16:01:23 +0800</lastBuildDate>
+    
+	<atom:link href="http://riverrrflow.github.io/myblog/categories/java/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Ubuntu14.04编译OpenJDK7</title>
+      <link>http://riverrrflow.github.io/myblog/post/2015-07-15-build-openjdk7/</link>
+      <pubDate>Fri, 10 Jul 2015 16:01:23 +0800</pubDate>
+      
+      <guid>http://riverrrflow.github.io/myblog/post/2015-07-15-build-openjdk7/</guid>
+      <description>最近在看深入理解Java虚拟机，第一章有讲到自己编译OpenJDK7，故用Ubuntu14.04实践下。 构建编译环境 JDK1.7.0_45 到oracle官网上</description>
+    </item>
+    
+  </channel>
+</rss>

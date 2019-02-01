@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>感想与观点 on river&#39;s blog</title>
+    <link>http://riverrrflow.github.io/myblog/categories/%E6%84%9F%E6%83%B3%E4%B8%8E%E8%A7%82%E7%82%B9/</link>
+    <description>Recent content in 感想与观点 on river&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 31 Dec 2015 16:01:23 +0800</lastBuildDate>
+    
+	<atom:link href="http://riverrrflow.github.io/myblog/categories/%E6%84%9F%E6%83%B3%E4%B8%8E%E8%A7%82%E7%82%B9/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>2015年终总结</title>
+      <link>http://riverrrflow.github.io/myblog/post/2015-12-31-summary2015/</link>
+      <pubDate>Thu, 31 Dec 2015 16:01:23 +0800</pubDate>
+      
+      <guid>http://riverrrflow.github.io/myblog/post/2015-12-31-summary2015/</guid>
+      <description>看着去年自己写的总结，再想想今年，感慨颇多。一年时间真的好快，快的好像昨天的我还在键盘上敲着去年的总结，一年的时间又感觉很慢，很多东西都已悄</description>
+    </item>
+    
+    <item>
+      <title>2014年终总结</title>
+      <link>http://riverrrflow.github.io/myblog/post/2014-12-31-summary2014/</link>
+      <pubDate>Wed, 31 Dec 2014 16:01:23 +0800</pubDate>
+      
+      <guid>http://riverrrflow.github.io/myblog/post/2014-12-31-summary2014/</guid>
+      <description>不知不觉，2015年已经到了，算下来自从高中结束，自己就已经很少写这种有点长又有点带着检讨气质的文章了（高中时写的检讨可是当着全班念的:P）</description>
+    </item>
+    
+    <item>
+      <title>为什么要写Blog？</title>
+      <link>http://riverrrflow.github.io/myblog/post/2014-12-28-why-blog/</link>
+      <pubDate>Sun, 28 Dec 2014 16:01:23 +0800</pubDate>
+      
+      <guid>http://riverrrflow.github.io/myblog/post/2014-12-28-why-blog/</guid>
+      <description>初衷 其实关于这个问题，网上已经有很多很多回答，我觉得阮一峰写的这个不错，另外，我也写几点自己的想法与感受： 强化学到的知识，我意识到并不是自己</description>
+    </item>
+    
+  </channel>
+</rss>

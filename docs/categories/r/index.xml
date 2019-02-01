@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>R on river&#39;s blog</title>
+    <link>http://riverrrflow.github.io/myblog/categories/r/</link>
+    <description>Recent content in R on river&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 23 Feb 2015 16:01:23 +0800</lastBuildDate>
+    
+	<atom:link href="http://riverrrflow.github.io/myblog/categories/r/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>R语言绘图初阶</title>
+      <link>http://riverrrflow.github.io/myblog/post/2015-02-23-r-graph/</link>
+      <pubDate>Mon, 23 Feb 2015 16:01:23 +0800</pubDate>
+      
+      <guid>http://riverrrflow.github.io/myblog/post/2015-02-23-r-graph/</guid>
+      <description>前几天关注了一下互联网行业大公司实习岗位的招聘要求，对数据挖掘和算法方向的都有熟悉R语言的优先这一项，想起去年自己自学了一段时间的R，但是是</description>
+    </item>
+    
+  </channel>
+</rss>

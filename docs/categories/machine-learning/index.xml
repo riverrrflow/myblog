@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Machine Learning on river&#39;s blog</title>
+    <link>http://riverrrflow.github.io/myblog/categories/machine-learning/</link>
+    <description>Recent content in Machine Learning on river&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 10 Jun 2015 16:01:23 +0800</lastBuildDate>
+    
+	<atom:link href="http://riverrrflow.github.io/myblog/categories/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>决策树</title>
+      <link>http://riverrrflow.github.io/myblog/post/2015-06-10-decision-tree/</link>
+      <pubDate>Wed, 10 Jun 2015 16:01:23 +0800</pubDate>
+      
+      <guid>http://riverrrflow.github.io/myblog/post/2015-06-10-decision-tree/</guid>
+      <description>简介 分类决策树模型是一种描述对实例进行分类的树形结构，决策树由结点和有向边组成，借点有两种类型：内部结点和叶结点。 特征选择 选取对训练数据具有</description>
+    </item>
+    
+    <item>
+      <title>k近邻法</title>
+      <link>http://riverrrflow.github.io/myblog/post/2015-06-05-knn/</link>
+      <pubDate>Fri, 05 Jun 2015 16:01:23 +0800</pubDate>
+      
+      <guid>http://riverrrflow.github.io/myblog/post/2015-06-05-knn/</guid>
+      <description>前言 k近邻法(k-nearest neighbor, k-NN)是一种基本的分类与回归的非参数统计方法。 k-NN分类：一个对象的分类是由其邻居的“多数表决”确定</description>
+    </item>
+    
+    <item>
+      <title>统计学习方法概述</title>
+      <link>http://riverrrflow.github.io/myblog/post/2015-05-25-statistical-learning-overview/</link>
+      <pubDate>Mon, 25 May 2015 16:01:23 +0800</pubDate>
+      
+      <guid>http://riverrrflow.github.io/myblog/post/2015-05-25-statistical-learning-overview/</guid>
+      <description>统计学习三要素 模型(model) 模型即为所要学习的条件概率分布或决策函数。 由决策函数表示的模型为非概率模型。 由条件概率表示的模型为概率模型。</description>
+    </item>
+    
+    <item>
+      <title>LDA初窥</title>
+      <link>http://riverrrflow.github.io/myblog/post/2015-05-20-ldabout/</link>
+      <pubDate>Wed, 20 May 2015 16:01:23 +0800</pubDate>
+      
+      <guid>http://riverrrflow.github.io/myblog/post/2015-05-20-ldabout/</guid>
+      <description>英文Twitter提取主题 数据预处理 原始语料 数据原始为100万条twitter 步骤 拿到要处理的字段:linelist[2] 去除掉除英文外的其</description>
+    </item>
+    
+  </channel>
+</rss>

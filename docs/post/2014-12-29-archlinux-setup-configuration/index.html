@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="zh-cn" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>ArchLinux安装与配置 - river&#39;s blog</title>
+  
+
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="true"/>
+
+
+<meta name="applicable-device" content="pc,mobile">
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="author" content="riverrrflow" />
+  <meta name="description" content="电脑在Ubuntu14.04下发热厉害，网页开多了也经常死机，也差不多该更新换代了，但目前资金不足，便决定再次安装轻量级的ArchLinux" />
+
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.53" />
+
+
+<link rel="canonical" href="http://riverrrflow.github.io/myblog/post/2014-12-29-archlinux-setup-configuration/" />
+
+
+
+<link rel="icon" href="/myblog/favicon.ico" />
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/myblog/sass/jane.min.ec807d8b802a40889537c26e014f733206312ea440d42e1f0dabed80918de1ac.css" integrity="sha256-7IB9i4AqQIiVN8JuAU9zMgYxLqRA1C4fDavtgJGN4aw=" media="screen" crossorigin="anonymous">
+
+
+
+
+
+<meta property="og:title" content="ArchLinux安装与配置" />
+<meta property="og:description" content="电脑在Ubuntu14.04下发热厉害，网页开多了也经常死机，也差不多该更新换代了，但目前资金不足，便决定再次安装轻量级的ArchLinux" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://riverrrflow.github.io/myblog/post/2014-12-29-archlinux-setup-configuration/" /><meta property="article:published_time" content="2014-12-29T16:01:23&#43;08:00"/>
+<meta property="article:modified_time" content="2014-12-29T16:01:23&#43;08:00"/>
+
+<meta itemprop="name" content="ArchLinux安装与配置">
+<meta itemprop="description" content="电脑在Ubuntu14.04下发热厉害，网页开多了也经常死机，也差不多该更新换代了，但目前资金不足，便决定再次安装轻量级的ArchLinux">
+
+
+<meta itemprop="datePublished" content="2014-12-29T16:01:23&#43;08:00" />
+<meta itemprop="dateModified" content="2014-12-29T16:01:23&#43;08:00" />
+<meta itemprop="wordCount" content="1448">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="ArchLinux安装与配置"/>
+<meta name="twitter:description" content="电脑在Ubuntu14.04下发热厉害，网页开多了也经常死机，也差不多该更新换代了，但目前资金不足，便决定再次安装轻量级的ArchLinux"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/myblog/" class="logo">river&#39;s blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://riverrrflow.github.io/myblog/">Blog</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://riverrrflow.github.io/myblog/post/">Archives</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://riverrrflow.github.io/myblog/tags/">Tags</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://riverrrflow.github.io/myblog/categories/">Categories</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://riverrrflow.github.io/myblog/about/">About</a>
+          
+        
+      </li>
+    
+  </ul>
+</nav>
+
+
+  
+
+  
+
+  <header id="header" class="header container">
+    <div class="logo-wrapper">
+  <a href="/myblog/" class="logo">
+    
+      river&#39;s blog
+    
+  </a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://riverrrflow.github.io/myblog/">Blog</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://riverrrflow.github.io/myblog/post/">Archives</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://riverrrflow.github.io/myblog/tags/">Tags</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://riverrrflow.github.io/myblog/categories/">Categories</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://riverrrflow.github.io/myblog/about/">About</a>
+          
+
+        
+
+      </li>
+    
+    
+  </ul>
+</nav>
+
+  </header>
+
+  <div id="mobile-panel">
+    <main id="main" class="main bg-llight">
+      <div class="content-wrapper">
+        <div id="content" class="content container">
+          <article class="post bg-white">
+    
+    <header class="post-header">
+      <h1 class="post-title">ArchLinux安装与配置</h1>
+      
+      <div class="post-meta">
+        <time datetime="2014-12-29" class="post-time">
+          2014-12-29
+        </time>
+        <div class="post-category">
+            <a href="http://riverrrflow.github.io/myblog/categories/linux/"> Linux </a>
+            
+          </div>
+        
+
+        
+        
+
+        
+        
+      </div>
+    </header>
+
+    
+    
+
+    
+    <div class="post-content">
+      
+
+<p>电脑在Ubuntu14.04下发热厉害，网页开多了也经常死机，也差不多该更新换代了，但目前资金不足，便决定再次安装轻量级的<a href="https://www.archlinux.org/">ArchLinux</a>，鉴于之前失败过一次，这次更加小心了。
+先上图：
+<img src="http://ww4.sinaimg.cn/large/6120fe13jw1enu2a88703j20qa09zn0y.jpg" alt="" /></p>
+
+<h2 id="安装archlinux">安装ArchLinux</h2>
+
+<p>这块直接参考<a href="https://wiki.archlinux.org/index.php/Beginners%27_guidehttps://wiki.archlinux.org/">ArchWiki</a>，不喜欢英文的可以选择中文显示，ArchLinux的Wiki写的非常不错，一步一步照着敲肯定不会出错，这里我就写下几个我认为比较重要的地方：</p>
+
+<p><strong>制作U盘镜像</strong></p>
+
+<ol>
+<li><p>Linux用户可以直接用<code>dd</code>命令，用U盘替换 /dev/sdx，如 /dev/sdb（不要加上数字，也就是说，不要键入 /dev/sdb1 之类的东西)：</p>
+
+<pre><code class="language-sh">$ dd bs=4M if=/path/to/archlinux.iso of=/dev/sdx &amp;&amp; sync
+</code></pre></li>
+
+<li><p>Windows用户用Wiki上推荐的USBwriter制作的镜像可能引导不了，推荐大家使用<a href="http://sourceforge.net/projects/win32diskimager/">Win32 Disk Imager</a>。</p></li>
+
+<li><p>不过用这两种方式装完之后，都需要用Linux上的dd命令往U盘的前512字节写零来恢复它完整的容量：</p>
+
+<pre><code class="language-sh">$ dd count=1 bs=512 if=/dev/zero of=/dev/sdx &amp;&amp; sync
+</code></pre></li>
+</ol>
+
+<p><strong>字符乱码问题</strong> locale.gen不要全部配成zh开头的，还是加上en_US，这样安装完之后不会出现乱码。</p>
+
+<p><strong>登陆管理器</strong> 如果进入不了图形界面，一定要检查一下自己是否安装了登陆管理器，我现在使用的是slim，轻量级，并配置为随机主题，如果登陆管理器进不了图形界面，一般是配置文件有问题，可以按Ctrl+Alt+F2再开一个终端用root进行修改。</p>
+
+<h2 id="钟爱的窗口管理器">钟爱的窗口管理器</h2>
+
+<p>先比较下我用过的这些wm：gnome，i3wm，awesome，xmonad，herbstluftwm</p>
+
+<ol>
+<li>gnome还是挺好看的，我喜欢它的gdm，就是太大太占资源，本本吃不起；</li>
+<li>i3wm用了将近一个月，配置简单，反应也不慢，但是我的chromium在里面运行时经常无故关闭，重装chromium，检查快捷键都没用，而且上面的i3bar看不习惯，就换了xmonad；</li>
+<li>看了一点haskell之后配置了一下xmonad，发现确实不好配置，haskell这门语言也需要花时间去学习，就试试awesome；</li>
+<li>相比xmonad，awesome配置起来还是很方面的，用了将近一个星期，感觉awesome过于复杂，而且那个bar也不好看，换成herbstluftwm；</li>
+<li>目前用的就是herbstluftwm，配置简单，操作方便，运行速度也非常快，而且为了让窗口达到最大化，我直接去掉了状态栏。</li>
+</ol>
+
+<p>下面列一下我使用的配置文件中重要的配置(~/.config/herbstluftwm/autostart):</p>
+
+<pre><code class="language-sh">Mod=Mod4   # Use the super key as the main modifier
+feh --bg-scale /home/quentin/Entertainment/Pictures/niu.jpg # background
+xcompmgr -c # transparent
+# keybindings
+hc keybind Control-bracketleft spawn emacs
+hc keybind Control-F1 spawn deepin-screenshot
+hc keybind Control-F2 spawn chromium
+hc keybind Control-F3 spawn firefox
+hc keybind Control-F4 spawn /opt/ideaIU/bin/idea.sh
+hc keybind Control-F5 spawn virtualbox
+hc keybind Control-F6 spawn python /home/quentin/git/my_profile/OpenOrClosePSMouse.py
+hc keybind Control-F7 spawn evince # PDF
+hc keybind Control-F9 spawn deadbeef # music
+</code></pre>
+
+<h2 id="常用软件">常用软件</h2>
+
+<table>
+<thead>
+<tr>
+<th align="center">software</th>
+<th align="left">description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center">Emacs</td>
+<td align="left">神的编辑器</td>
+</tr>
+
+<tr>
+<td align="center">Urxvt</td>
+<td align="left">最常用的终端</td>
+</tr>
+
+<tr>
+<td align="center">zsh</td>
+<td align="left">自动补全很给力</td>
+</tr>
+
+<tr>
+<td align="center">ibus</td>
+<td align="left">中文输入法</td>
+</tr>
+
+<tr>
+<td align="center">git</td>
+<td align="left">版本控制</td>
+</tr>
+
+<tr>
+<td align="center">chromium</td>
+<td align="left">书签同步太强大</td>
+</tr>
+
+<tr>
+<td align="center">firefox</td>
+<td align="left">离不开firebug等各种插件</td>
+</tr>
+
+<tr>
+<td align="center">IDEA</td>
+<td align="left">Java IDE</td>
+</tr>
+
+<tr>
+<td align="center">evince</td>
+<td align="left">看PDF</td>
+</tr>
+
+<tr>
+<td align="center">deadbeef</td>
+<td align="left">听音乐</td>
+</tr>
+</tbody>
+</table>
+
+<p>需要说的是deepin-screenshot这款截图软件，相比QQ上的截图工具也毫不逊色，但使用命令<code>yaourt -S deepin-screenshot</code>安装会出现:
+<code>在构建deepin-pygtk时提示：无法下载pygtk_2.24.0-3deepin3.debian.tar.gz</code>
+故需要在<code>/etc/pacman.conf</code>中添加源:</p>
+
+<pre><code class="language-sh">[home_metakcahura_arch-deepin_Arch_Extra]
+SigLevel = Never
+Server = http://download.opensuse.org/repositories/home:/metakcahura:/arch-deepin/Arch_Extra/$arch
+# 若升级时若总是提示文件校验失败，使用备用地址即可
+# Server = http://anorien.csc.warwick.ac.uk/mirrors/download.opensuse.org/repositories/home:/metakcahura:/arch-deepin/Arch_Extra/$arch
+</code></pre>
+
+<p>再直接用pacman安装即可，详细请看我之前再Arch Forums上发的帖子<a href="https://bbs.archlinuxcn.org/viewtopic.php?id=3040">用yaourt安装deepin-screenshot失败，archlinux12.01-ideapadY460</a></p>
+
+<h2 id="配置文件下载">配置文件下载</h2>
+
+<p><a href="https://github.com/jlovedragon/profile/tree/master/archlinux">github链接</a></p>
+
+    </div>
+
+    
+    
+
+
+    
+    
+
+    <footer class="post-footer">
+      
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/myblog/post/2014-12-30-download-luoo-music/">
+            
+            <i class="iconfont">
+              <svg  class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M691.908486 949.511495l75.369571-89.491197c10.963703-12.998035 10.285251-32.864502-1.499144-44.378743L479.499795 515.267417 757.434875 204.940602c11.338233-12.190647 11.035334-32.285311-0.638543-44.850487l-80.46666-86.564541c-11.680017-12.583596-30.356378-12.893658-41.662889-0.716314L257.233596 494.235404c-11.332093 12.183484-11.041474 32.266891 0.657986 44.844348l80.46666 86.564541c1.772366 1.910513 3.706415 3.533476 5.750981 4.877077l306.620399 321.703933C662.505829 963.726242 680.945807 962.528973 691.908486 949.511495z"></path>
+</svg>
+
+            </i>
+            <span class="prev-text nav-default">两种方法抓取落网所有专辑的音乐</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        
+          <a class="next" href="/myblog/post/2014-12-28-why-blog/">
+            <span class="next-text nav-default">为什么要写Blog？</span>
+            <span class="prev-text nav-mobile">下一篇</span>
+            
+            <i class="iconfont">
+              <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M332.091514 74.487481l-75.369571 89.491197c-10.963703 12.998035-10.285251 32.864502 1.499144 44.378743l286.278095 300.375162L266.565125 819.058374c-11.338233 12.190647-11.035334 32.285311 0.638543 44.850487l80.46666 86.564541c11.680017 12.583596 30.356378 12.893658 41.662889 0.716314l377.434212-421.426145c11.332093-12.183484 11.041474-32.266891-0.657986-44.844348l-80.46666-86.564541c-1.772366-1.910513-3.706415-3.533476-5.750981-4.877077L373.270379 71.774697C361.493148 60.273758 343.054193 61.470003 332.091514 74.487481z"></path>
+</svg>
+
+            </i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+
+  
+
+  
+  
+    
+
+
+
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="icon-links">
+  
+
+
+<a href="http://riverrrflow.github.io/myblog/index.xml" rel="noopener alternate" type="application/rss&#43;xml"
+    class="iconfont" title="rss" target="_blank">
+    <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="30" height="30">
+  <path d="M819.157333 1024C819.157333 574.592 449.408 204.8 0 204.8V0c561.706667 0 1024 462.293333 1024 1024h-204.842667zM140.416 743.04a140.8 140.8 0 0 1 140.501333 140.586667A140.928 140.928 0 0 1 140.074667 1024C62.72 1024 0 961.109333 0 883.626667s62.933333-140.544 140.416-140.586667zM678.784 1024h-199.04c0-263.210667-216.533333-479.786667-479.744-479.786667V345.173333c372.352 0 678.784 306.517333 678.784 678.826667z"></path>
+</svg>
+
+  </a>
+   
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - <a class="theme-link" href="https://github.com/xianmin/hugo-theme-jane">Jane</a>
+  </span>
+
+  <span class="copyright-year">
+    &copy;
+    
+      2017 -
+    2019
+    <span class="heart">
+      
+      <i class="iconfont">
+        <svg class="icon" viewBox="0 0 1025 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="14" height="14">
+  <path d="M1000.1 247.9c-15.5-37.3-37.6-70.6-65.7-98.9-54.4-54.8-125.8-85-201-85-85.7 0-166 39-221.4 107.4C456.6 103 376.3 64 290.6 64c-75.1 0-146.5 30.4-201.1 85.6-28.2 28.5-50.4 61.9-65.8 99.3-16 38.8-24 79.9-23.6 122.2 0.7 91.7 40.1 177.2 108.1 234.8 3.1 2.6 6 5.1 8.9 7.8 14.9 13.4 58 52.8 112.6 102.7 93.5 85.5 209.9 191.9 257.5 234.2 7 6.1 15.8 9.5 24.9 9.5 9.2 0 18.1-3.4 24.9-9.5 34.5-30.7 105.8-95.9 181.4-165 74.2-67.8 150.9-138 195.8-178.2 69.5-57.9 109.6-144.4 109.9-237.3 0.1-42.5-8-83.6-24-122.2z"
+   fill="#8a8a8a"></path>
+</svg>
+
+      </i>
+    </span><span class="author">
+        riverrrflow
+        
+      </span></span>
+
+  
+  
+
+  
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont">
+        
+        <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="35" height="35">
+  <path d="M510.866688 227.694839 95.449397 629.218702l235.761562 0-2.057869 328.796468 362.40389 0L691.55698 628.188232l241.942331-3.089361L510.866688 227.694839zM63.840492 63.962777l894.052392 0 0 131.813095L63.840492 195.775872 63.840492 63.962777 63.840492 63.962777zM63.840492 63.962777"></path>
+</svg>
+
+      </i>
+    </div>
+  </div>
+  
+<script type="text/javascript" src="/myblog/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/myblog/lib/slideout/slideout-1.0.1.min.js"></script>
+
+
+
+
+<script type="text/javascript" src="/myblog/js/main.638251f4230630f0335d8c6748e53a96f94b72670920b60c09a56fdc8bece214.js" integrity="sha256-Y4JR9CMGMPAzXYxnSOU6lvlLcmcJILYMCaVv3Ivs4hQ=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

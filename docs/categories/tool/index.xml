@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tool on river&#39;s blog</title>
+    <link>http://riverrrflow.github.io/myblog/categories/tool/</link>
+    <description>Recent content in Tool on river&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 30 Nov 2015 16:01:23 +0800</lastBuildDate>
+    
+	<atom:link href="http://riverrrflow.github.io/myblog/categories/tool/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Mac多显示器之间的焦点切换</title>
+      <link>http://riverrrflow.github.io/myblog/post/2015-11-30-switch-multi-display/</link>
+      <pubDate>Mon, 30 Nov 2015 16:01:23 +0800</pubDate>
+      
+      <guid>http://riverrrflow.github.io/myblog/post/2015-11-30-switch-multi-display/</guid>
+      <description>13寸的MBP屏幕实在太小，故入手了DVI的转接口外接了公司台式机的显示器，内置显示器用来码代码，外接显示器用来看网页等,双屏显示妥妥的。 但</description>
+    </item>
+    
+    <item>
+      <title>Mac下配置iTerm2实现快速远程登录</title>
+      <link>http://riverrrflow.github.io/myblog/post/2015-04-24-mac-iterm-configuration/</link>
+      <pubDate>Fri, 24 Apr 2015 16:01:23 +0800</pubDate>
+      
+      <guid>http://riverrrflow.github.io/myblog/post/2015-04-24-mac-iterm-configuration/</guid>
+      <description>Mac上的神器太多，今天主要讲下如何配置iTerm2终端实现快速远程登录。 编写脚本 需要用到expect语法，代码如下： #!/usr/bin/expect -f set username YourUserName // 设置用户名</description>
+    </item>
+    
+  </channel>
+</rss>

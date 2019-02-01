@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on river&#39;s blog</title>
+    <link>http://riverrrflow.github.io/myblog/categories/linux/</link>
+    <description>Recent content in Linux on river&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 29 Dec 2014 16:01:23 +0800</lastBuildDate>
+    
+	<atom:link href="http://riverrrflow.github.io/myblog/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ArchLinux安装与配置</title>
+      <link>http://riverrrflow.github.io/myblog/post/2014-12-29-archlinux-setup-configuration/</link>
+      <pubDate>Mon, 29 Dec 2014 16:01:23 +0800</pubDate>
+      
+      <guid>http://riverrrflow.github.io/myblog/post/2014-12-29-archlinux-setup-configuration/</guid>
+      <description>电脑在Ubuntu14.04下发热厉害，网页开多了也经常死机，也差不多该更新换代了，但目前资金不足，便决定再次安装轻量级的ArchLinux</description>
+    </item>
+    
+  </channel>
+</rss>

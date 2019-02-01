@@ -1,168 +1,140 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Jane - A super concise theme for Hugo</title>
+    <title>Posts on river&#39;s blog</title>
     <link>http://riverrrflow.github.io/myblog/post/</link>
-    <description>Recent content in Posts on Jane - A super concise theme for Hugo</description>
+    <description>Recent content in Posts on river&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 06 Mar 2018 16:01:23 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 31 Dec 2015 16:01:23 +0800</lastBuildDate>
     
 	<atom:link href="http://riverrrflow.github.io/myblog/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Jane 主题预览</title>
-      <link>http://riverrrflow.github.io/myblog/post/jane-theme-preview/</link>
-      <pubDate>Tue, 06 Mar 2018 16:01:23 +0800</pubDate>
+      <title>2015年终总结</title>
+      <link>http://riverrrflow.github.io/myblog/post/2015-12-31-summary2015/</link>
+      <pubDate>Thu, 31 Dec 2015 16:01:23 +0800</pubDate>
       
-      <guid>http://riverrrflow.github.io/myblog/post/jane-theme-preview/</guid>
-      <description>主题预览,内容有待填充。</description>
+      <guid>http://riverrrflow.github.io/myblog/post/2015-12-31-summary2015/</guid>
+      <description>看着去年自己写的总结，再想想今年，感慨颇多。一年时间真的好快，快的好像昨天的我还在键盘上敲着去年的总结，一年的时间又感觉很慢，很多东西都已悄</description>
     </item>
     
     <item>
-      <title>Jane Theme Preview</title>
-      <link>http://riverrrflow.github.io/myblog/post/jane-theme-preview/</link>
-      <pubDate>Mon, 01 Jan 2018 16:01:23 +0800</pubDate>
+      <title>Mac多显示器之间的焦点切换</title>
+      <link>http://riverrrflow.github.io/myblog/post/2015-11-30-switch-multi-display/</link>
+      <pubDate>Mon, 30 Nov 2015 16:01:23 +0800</pubDate>
       
-      <guid>http://riverrrflow.github.io/myblog/post/jane-theme-preview/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Markdown&lt;/strong&gt; is created by &lt;a href=&#34;http://daringfireball.net/&#34;&gt;Daring Fireball&lt;/a&gt;, the original guideline is &lt;a href=&#34;http://daringfireball.net/projects/markdown/syntax&#34;&gt;here&lt;/a&gt;. Its syntax, however, varies between different parsers or editors.&lt;/p&gt;
-
-&lt;p&gt;Please note that HTML fragments in markdown source will be recognized but not parsed or rendered. Also, there may be small reformatting on the original markdown source code after saving.&lt;/p&gt;</description>
+      <guid>http://riverrrflow.github.io/myblog/post/2015-11-30-switch-multi-display/</guid>
+      <description>13寸的MBP屏幕实在太小，故入手了DVI的转接口外接了公司台式机的显示器，内置显示器用来码代码，外接显示器用来看网页等,双屏显示妥妥的。 但</description>
     </item>
     
     <item>
-      <title>Shortcodes Preview</title>
-      <link>http://riverrrflow.github.io/myblog/post/shortcodes-preview/</link>
-      <pubDate>Sun, 04 Mar 2018 16:01:23 +0800</pubDate>
+      <title>Ubuntu14.04编译OpenJDK7</title>
+      <link>http://riverrrflow.github.io/myblog/post/2015-07-15-build-openjdk7/</link>
+      <pubDate>Fri, 10 Jul 2015 16:01:23 +0800</pubDate>
       
-      <guid>http://riverrrflow.github.io/myblog/post/shortcodes-preview/</guid>
-      <description>&lt;h2 id=&#34;what-a-shortcode-is&#34;&gt;What a Shortcode is&lt;/h2&gt;
-
-&lt;p&gt;Hugo loves Markdown because of its simple content format, but there are times when Markdown falls short. Often, content authors are forced to add raw HTML (e.g., video &lt;code&gt;&amp;lt;iframes&amp;gt;&lt;/code&gt;) to Markdown content. We think this contradicts the beautiful simplicity of Markdown&amp;rsquo;s syntax.&lt;/p&gt;
-
-&lt;p&gt;Hugo created &lt;strong&gt;shortcodes&lt;/strong&gt; to circumvent these limitations.&lt;/p&gt;
-
-&lt;p&gt;A shortcode is a simple snippet inside a content file that Hugo will render using a predefined template. Note that shortcodes will not work in template files. If you need the type of drop-in functionality that shortcodes provide but in a template, you most likely want a [partial template][partials] instead.&lt;/p&gt;
-
-&lt;p&gt;In addition to cleaner Markdown, shortcodes can be updated any time to reflect new classes, techniques, or standards. At the point of site generation, Hugo shortcodes will easily merge in your changes. You avoid a possibly complicated search and replace operation.&lt;/p&gt;
-
-&lt;p&gt;More details: &lt;a href=&#34;https://gohugo.io/content-management/shortcodes/&#34;&gt;https://gohugo.io/content-management/shortcodes/&lt;/a&gt;&lt;/p&gt;</description>
+      <guid>http://riverrrflow.github.io/myblog/post/2015-07-15-build-openjdk7/</guid>
+      <description>最近在看深入理解Java虚拟机，第一章有讲到自己编译OpenJDK7，故用Ubuntu14.04实践下。 构建编译环境 JDK1.7.0_45 到oracle官网上</description>
     </item>
     
     <item>
-      <title>Image Preview</title>
-      <link>http://riverrrflow.github.io/myblog/post/image-preview/</link>
-      <pubDate>Sat, 03 Mar 2018 16:01:23 +0800</pubDate>
+      <title>决策树</title>
+      <link>http://riverrrflow.github.io/myblog/post/2015-06-10-decision-tree/</link>
+      <pubDate>Wed, 10 Jun 2015 16:01:23 +0800</pubDate>
       
-      <guid>http://riverrrflow.github.io/myblog/post/image-preview/</guid>
-      <description>&lt;p&gt;Thanks for &lt;a href=&#34;https://github.com/liwenyip/hugo-easy-gallery&#34;&gt;liwenyip/hugo-easy-gallery&lt;/a&gt; &amp;amp; &lt;a href=&#34;https://github.com/xianmin/hugo-theme-jane/pull/48&#34;&gt;Zebradil · Pull Request #48&lt;/a&gt; .&lt;/p&gt;
-
-&lt;p&gt;Now, we could use &lt;code&gt;{{&amp;lt; gallery &amp;gt;}}&lt;/code&gt; shortcode in hugo-theme-jane.&lt;/p&gt;
-
-&lt;h2 id=&#34;normal-image&#34;&gt;Normal Image&lt;/h2&gt;
-
-&lt;p&gt;This is an image in &lt;code&gt;static/image&lt;/code&gt; folder.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;![This is an image in `static/image` folder.](/image/example.jpg)
-&lt;/code&gt;&lt;/pre&gt;</description>
+      <guid>http://riverrrflow.github.io/myblog/post/2015-06-10-decision-tree/</guid>
+      <description>简介 分类决策树模型是一种描述对实例进行分类的树形结构，决策树由结点和有向边组成，借点有两种类型：内部结点和叶结点。 特征选择 选取对训练数据具有</description>
     </item>
     
     <item>
-      <title>Shortcodes Notice Preview</title>
-      <link>http://riverrrflow.github.io/myblog/post/shortcode-notice/</link>
-      <pubDate>Sat, 03 Mar 2018 16:01:23 +0800</pubDate>
+      <title>k近邻法</title>
+      <link>http://riverrrflow.github.io/myblog/post/2015-06-05-knn/</link>
+      <pubDate>Fri, 05 Jun 2015 16:01:23 +0800</pubDate>
       
-      <guid>http://riverrrflow.github.io/myblog/post/shortcode-notice/</guid>
-      <description>normal use Note example: {{% notice note %}} A notice disclaimer {{% /notice %}} Result: note A notice disclaimer You could custom title : {{% notice note 笔记 %}} A notice disclaimer {{% /notice %}} 笔记 A notice disclaimer tip {{% notice tip %}} A tip disclaimer {{% /tip %}} tip A tip disclaimer info {{% notice info %}} A info disclaimer {{% /notice %}} info An information</description>
+      <guid>http://riverrrflow.github.io/myblog/post/2015-06-05-knn/</guid>
+      <description>前言 k近邻法(k-nearest neighbor, k-NN)是一种基本的分类与回归的非参数统计方法。 k-NN分类：一个对象的分类是由其邻居的“多数表决”确定</description>
     </item>
     
     <item>
-      <title>Jane-Theme Footnote Preview</title>
-      <link>http://riverrrflow.github.io/myblog/post/doc-footnote-preview/</link>
-      <pubDate>Thu, 01 Mar 2018 16:01:23 +0800</pubDate>
+      <title>统计学习方法概述</title>
+      <link>http://riverrrflow.github.io/myblog/post/2015-05-25-statistical-learning-overview/</link>
+      <pubDate>Mon, 25 May 2015 16:01:23 +0800</pubDate>
       
-      <guid>http://riverrrflow.github.io/myblog/post/doc-footnote-preview/</guid>
-      <description>&lt;p&gt;Hugo-theme-jane optimized for footnote. When you mouse hover the footnote&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:example&#34;&gt;&lt;a href=&#34;#fn:example&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; , footnote content will be displayed.&lt;/p&gt;</description>
+      <guid>http://riverrrflow.github.io/myblog/post/2015-05-25-statistical-learning-overview/</guid>
+      <description>统计学习三要素 模型(model) 模型即为所要学习的条件概率分布或决策函数。 由决策函数表示的模型为非概率模型。 由条件概率表示的模型为概率模型。</description>
     </item>
     
     <item>
-      <title>English Creating a New Theme</title>
-      <link>http://riverrrflow.github.io/myblog/post/english-preview/</link>
-      <pubDate>Thu, 31 Aug 2017 15:43:48 +0800</pubDate>
+      <title>LDA初窥</title>
+      <link>http://riverrrflow.github.io/myblog/post/2015-05-20-ldabout/</link>
+      <pubDate>Wed, 20 May 2015 16:01:23 +0800</pubDate>
       
-      <guid>http://riverrrflow.github.io/myblog/post/english-preview/</guid>
-      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-
-&lt;p&gt;This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.&lt;/p&gt;</description>
+      <guid>http://riverrrflow.github.io/myblog/post/2015-05-20-ldabout/</guid>
+      <description>英文Twitter提取主题 数据预处理 原始语料 数据原始为100万条twitter 步骤 拿到要处理的字段:linelist[2] 去除掉除英文外的其</description>
     </item>
     
     <item>
-      <title>This is a very long title This is a very long title This is a very long title This is a very long title This is a very long title</title>
-      <link>http://riverrrflow.github.io/myblog/post/this-is-a-very-long-title/</link>
-      <pubDate>Wed, 30 Aug 2017 15:43:48 +0800</pubDate>
+      <title>Mac下配置iTerm2实现快速远程登录</title>
+      <link>http://riverrrflow.github.io/myblog/post/2015-04-24-mac-iterm-configuration/</link>
+      <pubDate>Fri, 24 Apr 2015 16:01:23 +0800</pubDate>
       
-      <guid>http://riverrrflow.github.io/myblog/post/this-is-a-very-long-title/</guid>
-      <description>This is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long titleThis is a very long title</description>
+      <guid>http://riverrrflow.github.io/myblog/post/2015-04-24-mac-iterm-configuration/</guid>
+      <description>Mac上的神器太多，今天主要讲下如何配置iTerm2终端实现快速远程登录。 编写脚本 需要用到expect语法，代码如下： #!/usr/bin/expect -f set username YourUserName // 设置用户名</description>
     </item>
     
     <item>
-      <title>Creating a New Theme</title>
-      <link>http://riverrrflow.github.io/myblog/post/creating-a-new-theme/</link>
-      <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
+      <title>R语言绘图初阶</title>
+      <link>http://riverrrflow.github.io/myblog/post/2015-02-23-r-graph/</link>
+      <pubDate>Mon, 23 Feb 2015 16:01:23 +0800</pubDate>
       
-      <guid>http://riverrrflow.github.io/myblog/post/creating-a-new-theme/</guid>
-      <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
-We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
+      <guid>http://riverrrflow.github.io/myblog/post/2015-02-23-r-graph/</guid>
+      <description>前几天关注了一下互联网行业大公司实习岗位的招聘要求，对数据挖掘和算法方向的都有熟悉R语言的优先这一项，想起去年自己自学了一段时间的R，但是是</description>
     </item>
     
     <item>
-      <title>(Hu)go Template Primer</title>
-      <link>http://riverrrflow.github.io/myblog/post/goisforlovers/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      <title>Python小结</title>
+      <link>http://riverrrflow.github.io/myblog/post/2015-01-05-python-summary/</link>
+      <pubDate>Mon, 05 Jan 2015 16:01:23 +0800</pubDate>
       
-      <guid>http://riverrrflow.github.io/myblog/post/goisforlovers/</guid>
-      <description>Hugo uses the excellent go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in go templates.
-This document is a brief primer on using go templates.</description>
+      <guid>http://riverrrflow.github.io/myblog/post/2015-01-05-python-summary/</guid>
+      <description>用了将近3个月的python，也写了一些小程序，前几天看了廖雪峰的Python教程，感觉写的很不错，故从头到尾看了几遍，摘录其中我认为应该掌</description>
     </item>
     
     <item>
-      <title>Getting Started with Hugo</title>
-      <link>http://riverrrflow.github.io/myblog/post/hugoisforlovers/</link>
-      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      <title>2014年终总结</title>
+      <link>http://riverrrflow.github.io/myblog/post/2014-12-31-summary2014/</link>
+      <pubDate>Wed, 31 Dec 2014 16:01:23 +0800</pubDate>
       
-      <guid>http://riverrrflow.github.io/myblog/post/hugoisforlovers/</guid>
-      <description>Step 1. Install Hugo Goto hugo releases and download the appropriate version for your os and architecture.
-Save it somewhere specific as we will be using it in the next step.
-More complete instructions are available at installing hugo
-Step 2. Build the Docs Hugo has its own example site which happens to also be the documentation site you are reading right now.
-Follow the following steps:
- Clone the hugo repository Go into the repo Run hugo in server mode and build the docs Open your browser to http://localhost:1313  Corresponding pseudo commands:</description>
+      <guid>http://riverrrflow.github.io/myblog/post/2014-12-31-summary2014/</guid>
+      <description>不知不觉，2015年已经到了，算下来自从高中结束，自己就已经很少写这种有点长又有点带着检讨气质的文章了（高中时写的检讨可是当着全班念的:P）</description>
     </item>
     
     <item>
-      <title>Migrate to Hugo from Jekyll</title>
-      <link>http://riverrrflow.github.io/myblog/post/migrate-from-jekyll/</link>
-      <pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate>
+      <title>两种方法抓取落网所有专辑的音乐</title>
+      <link>http://riverrrflow.github.io/myblog/post/2014-12-30-download-luoo-music/</link>
+      <pubDate>Tue, 30 Dec 2014 16:01:23 +0800</pubDate>
       
-      <guid>http://riverrrflow.github.io/myblog/post/migrate-from-jekyll/</guid>
-      <description>Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
-▾ &amp;lt;root&amp;gt;/ ▾ images/ logo.png  should become
-▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.</description>
+      <guid>http://riverrrflow.github.io/myblog/post/2014-12-30-download-luoo-music/</guid>
+      <description>在落网上听音乐是一个非常享受的事情，唯美的封面、文字，瞬间就觉得自己置身于一个没有喧嚣、没有嘈杂的环境里，一切尽在不言中～ 最近在看爬虫相关的</description>
     </item>
     
     <item>
-      <title>Syntax Highlighting</title>
-      <link>http://riverrrflow.github.io/myblog/post/syntax-highlighting/</link>
-      <pubDate>Tue, 30 Aug 2011 16:01:23 +0800</pubDate>
+      <title>ArchLinux安装与配置</title>
+      <link>http://riverrrflow.github.io/myblog/post/2014-12-29-archlinux-setup-configuration/</link>
+      <pubDate>Mon, 29 Dec 2014 16:01:23 +0800</pubDate>
       
-      <guid>http://riverrrflow.github.io/myblog/post/syntax-highlighting/</guid>
-      <description>&lt;p&gt;More detail: &lt;a href=&#34;https://gohugo.io/content-management/syntax-highlighting/&#34;&gt;Syntax Highlighting | Hugo&lt;/a&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-js&#34;&gt;function helloWorld () {
-  alert(&amp;quot;Hello, World!&amp;quot;)
-}
-&lt;/code&gt;&lt;/pre&gt;</description>
+      <guid>http://riverrrflow.github.io/myblog/post/2014-12-29-archlinux-setup-configuration/</guid>
+      <description>电脑在Ubuntu14.04下发热厉害，网页开多了也经常死机，也差不多该更新换代了，但目前资金不足，便决定再次安装轻量级的ArchLinux</description>
+    </item>
+    
+    <item>
+      <title>为什么要写Blog？</title>
+      <link>http://riverrrflow.github.io/myblog/post/2014-12-28-why-blog/</link>
+      <pubDate>Sun, 28 Dec 2014 16:01:23 +0800</pubDate>
+      
+      <guid>http://riverrrflow.github.io/myblog/post/2014-12-28-why-blog/</guid>
+      <description>初衷 其实关于这个问题，网上已经有很多很多回答，我觉得阮一峰写的这个不错，另外，我也写几点自己的想法与感受： 强化学到的知识，我意识到并不是自己</description>
     </item>
     
   </channel>
