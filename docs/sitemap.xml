@@ -10,6 +10,13 @@
   </url>
   
   <url>
+    <loc>http://riverrrflow.github.io/myblog/post/2019-02-12_zookeeper_test/</loc>
+    <lastmod>2019-02-12T22:45:55+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://riverrrflow.github.io/myblog/post/2015-12-31-summary2015/</loc>
     <lastmod>2015-12-31T16:01:23+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -136,7 +143,7 @@
   
   <url>
     <loc>http://riverrrflow.github.io/myblog/post/</loc>
-    <lastmod>2015-12-31T16:01:23+08:00</lastmod>
+    <lastmod>2019-02-12T22:45:55+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -164,6 +171,13 @@
   <url>
     <loc>http://riverrrflow.github.io/myblog/categories/tool/</loc>
     <lastmod>2015-11-30T16:01:23+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://riverrrflow.github.io/myblog/categories/zookeeper/</loc>
+    <lastmod>2019-02-12T22:45:55+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>

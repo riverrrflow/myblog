@@ -6,10 +6,19 @@
     <description>Recent content in Posts on river&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 31 Dec 2015 16:01:23 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 12 Feb 2019 22:45:55 +0800</lastBuildDate>
     
 	<atom:link href="http://riverrrflow.github.io/myblog/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>zookeeper学习(1)小例子</title>
+      <link>http://riverrrflow.github.io/myblog/post/2019-02-12_zookeeper_test/</link>
+      <pubDate>Tue, 12 Feb 2019 22:45:55 +0800</pubDate>
+      
+      <guid>http://riverrrflow.github.io/myblog/post/2019-02-12_zookeeper_test/</guid>
+      <description>public class ConnectionWatcher implements Watcher { private CountDownLatch connectedSignal = new CountDownLatch(1); private static final int SESSION_TIMEOUT = 5000; protected ZooKeeper zk; public void connect(String hosts) throws InterruptedException, IOException { zk = new ZooKeeper(hosts, SESSION_TIMEOUT, this); connectedSignal.await(); } public void process(WatchedEvent event) { if(event.getState() == Event.KeeperState.SyncConnected) { connectedSignal.countDown(); } } public void close() throws InterruptedException { zk.close(); } } public class HelloZookeeper extends ConnectionWatcher { public void list(String groupName) throws</description>
+    </item>
     
     <item>
       <title>2015年终总结</title>
