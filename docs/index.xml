@@ -36,7 +36,9 @@
       
       <guid>http://riverrrflow.github.io/myblog/post/2019-02-12_zookeeper_test/</guid>
       
-        <description>&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public class ConnectionWatcher implements Watcher {
+        <description>&lt;p&gt;watch小例子：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public class ConnectionWatcher implements Watcher {
     private CountDownLatch connectedSignal = new CountDownLatch(1);
     private static final int SESSION_TIMEOUT = 5000;
     protected ZooKeeper zk;
@@ -57,6 +59,8 @@
     }
 }
 &lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;列出节点的子节点：&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;public class HelloZookeeper extends ConnectionWatcher {
 

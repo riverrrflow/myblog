@@ -6,6 +6,7 @@ title: "zookeeper学习(1)小例子"
 categories: [zookeeper]
 ---
 
+watch小例子：
 
 ```java
 public class ConnectionWatcher implements Watcher {
@@ -29,6 +30,8 @@ public class ConnectionWatcher implements Watcher {
     }
 }
 ```
+
+列出节点的子节点：
 
 ```java
 public class HelloZookeeper extends ConnectionWatcher {

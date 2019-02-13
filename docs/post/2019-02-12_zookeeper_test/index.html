@@ -23,7 +23,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="riverrrflow" />
-  <meta name="description" content="public class ConnectionWatcher implements Watcher { private CountDownLatch connectedSignal = new CountDownLatch(1); private static final int SESSION_TIMEOUT = 5000; protected ZooKeeper zk; public void connect(String hosts) throws InterruptedException, IOException { zk = new ZooKeeper(hosts, SESSION_TIMEOUT, this); connectedSignal.await(); } public void process(WatchedEvent event) { if(event.getState() == Event.KeeperState.SyncConnected) { connectedSignal.countDown(); } } public void close() throws InterruptedException { zk.close(); } } public class HelloZookeeper extends ConnectionWatcher { public void list(String groupName) throws" />
+  <meta name="description" content="watch小例子： public class ConnectionWatcher implements Watcher { private CountDownLatch connectedSignal = new CountDownLatch(1); private static final int SESSION_TIMEOUT = 5000; protected ZooKeeper zk; public void connect(String hosts) throws InterruptedException, IOException { zk = new ZooKeeper(hosts, SESSION_TIMEOUT, this); connectedSignal.await(); } public void process(WatchedEvent event) { if(event.getState() == Event.KeeperState.SyncConnected) { connectedSignal.countDown(); } } public void close() throws InterruptedException { zk.close(); } } 列出" />
 
 
 
@@ -57,25 +57,25 @@
 
 
 <meta property="og:title" content="zookeeper学习(1)小例子" />
-<meta property="og:description" content="public class ConnectionWatcher implements Watcher { private CountDownLatch connectedSignal = new CountDownLatch(1); private static final int SESSION_TIMEOUT = 5000; protected ZooKeeper zk; public void connect(String hosts) throws InterruptedException, IOException { zk = new ZooKeeper(hosts, SESSION_TIMEOUT, this); connectedSignal.await(); } public void process(WatchedEvent event) { if(event.getState() == Event.KeeperState.SyncConnected) { connectedSignal.countDown(); } } public void close() throws InterruptedException { zk.close(); } } public class HelloZookeeper extends ConnectionWatcher { public void list(String groupName) throws" />
+<meta property="og:description" content="watch小例子： public class ConnectionWatcher implements Watcher { private CountDownLatch connectedSignal = new CountDownLatch(1); private static final int SESSION_TIMEOUT = 5000; protected ZooKeeper zk; public void connect(String hosts) throws InterruptedException, IOException { zk = new ZooKeeper(hosts, SESSION_TIMEOUT, this); connectedSignal.await(); } public void process(WatchedEvent event) { if(event.getState() == Event.KeeperState.SyncConnected) { connectedSignal.countDown(); } } public void close() throws InterruptedException { zk.close(); } } 列出" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://riverrrflow.github.io/myblog/post/2019-02-12_zookeeper_test/" /><meta property="article:published_time" content="2019-02-12T22:45:55&#43;08:00"/>
 <meta property="article:modified_time" content="2019-02-12T22:45:55&#43;08:00"/>
 
 <meta itemprop="name" content="zookeeper学习(1)小例子">
-<meta itemprop="description" content="public class ConnectionWatcher implements Watcher { private CountDownLatch connectedSignal = new CountDownLatch(1); private static final int SESSION_TIMEOUT = 5000; protected ZooKeeper zk; public void connect(String hosts) throws InterruptedException, IOException { zk = new ZooKeeper(hosts, SESSION_TIMEOUT, this); connectedSignal.await(); } public void process(WatchedEvent event) { if(event.getState() == Event.KeeperState.SyncConnected) { connectedSignal.countDown(); } } public void close() throws InterruptedException { zk.close(); } } public class HelloZookeeper extends ConnectionWatcher { public void list(String groupName) throws">
+<meta itemprop="description" content="watch小例子： public class ConnectionWatcher implements Watcher { private CountDownLatch connectedSignal = new CountDownLatch(1); private static final int SESSION_TIMEOUT = 5000; protected ZooKeeper zk; public void connect(String hosts) throws InterruptedException, IOException { zk = new ZooKeeper(hosts, SESSION_TIMEOUT, this); connectedSignal.await(); } public void process(WatchedEvent event) { if(event.getState() == Event.KeeperState.SyncConnected) { connectedSignal.countDown(); } } public void close() throws InterruptedException { zk.close(); } } 列出">
 
 
 <meta itemprop="datePublished" content="2019-02-12T22:45:55&#43;08:00" />
 <meta itemprop="dateModified" content="2019-02-12T22:45:55&#43;08:00" />
-<meta itemprop="wordCount" content="137">
+<meta itemprop="wordCount" content="155">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="zookeeper学习(1)小例子"/>
-<meta name="twitter:description" content="public class ConnectionWatcher implements Watcher { private CountDownLatch connectedSignal = new CountDownLatch(1); private static final int SESSION_TIMEOUT = 5000; protected ZooKeeper zk; public void connect(String hosts) throws InterruptedException, IOException { zk = new ZooKeeper(hosts, SESSION_TIMEOUT, this); connectedSignal.await(); } public void process(WatchedEvent event) { if(event.getState() == Event.KeeperState.SyncConnected) { connectedSignal.countDown(); } } public void close() throws InterruptedException { zk.close(); } } public class HelloZookeeper extends ConnectionWatcher { public void list(String groupName) throws"/>
+<meta name="twitter:description" content="watch小例子： public class ConnectionWatcher implements Watcher { private CountDownLatch connectedSignal = new CountDownLatch(1); private static final int SESSION_TIMEOUT = 5000; protected ZooKeeper zk; public void connect(String hosts) throws InterruptedException, IOException { zk = new ZooKeeper(hosts, SESSION_TIMEOUT, this); connectedSignal.await(); } public void process(WatchedEvent event) { if(event.getState() == Event.KeeperState.SyncConnected) { connectedSignal.countDown(); } } public void close() throws InterruptedException { zk.close(); } } 列出"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -254,7 +254,9 @@
 
     
     <div class="post-content">
-      <pre><code class="language-java">public class ConnectionWatcher implements Watcher {
+      <p>watch小例子：</p>
+
+<pre><code class="language-java">public class ConnectionWatcher implements Watcher {
     private CountDownLatch connectedSignal = new CountDownLatch(1);
     private static final int SESSION_TIMEOUT = 5000;
     protected ZooKeeper zk;
@@ -275,6 +277,8 @@
     }
 }
 </code></pre>
+
+<p>列出节点的子节点：</p>
 
 <pre><code class="language-java">public class HelloZookeeper extends ConnectionWatcher {
 

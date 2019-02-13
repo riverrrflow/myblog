@@ -246,7 +246,7 @@
   <div class="post-content">
     
     <div class="post-summary">
-      public class ConnectionWatcher implements Watcher { private CountDownLatch connectedSignal = new CountDownLatch(1); private static final int SESSION_TIMEOUT = 5000; protected ZooKeeper zk; public void connect(String hosts) throws InterruptedException, IOException { zk = new ZooKeeper(hosts, SESSION_TIMEOUT, this); connectedSignal.await(); } public void process(WatchedEvent event) { if(event.getState() == Event.KeeperState.SyncConnected) { connectedSignal.countDown(); } } public void close() throws InterruptedException { zk.close(); } } public class HelloZookeeper extends ConnectionWatcher { public void list(String groupName) throws
+      watch小例子： public class ConnectionWatcher implements Watcher { private CountDownLatch connectedSignal = new CountDownLatch(1); private static final int SESSION_TIMEOUT = 5000; protected ZooKeeper zk; public void connect(String hosts) throws InterruptedException, IOException { zk = new ZooKeeper(hosts, SESSION_TIMEOUT, this); connectedSignal.await(); } public void process(WatchedEvent event) { if(event.getState() == Event.KeeperState.SyncConnected) { connectedSignal.countDown(); } } public void close() throws InterruptedException { zk.close(); } } 列出
     </div>
     <div class="read-more">
       <a href="/myblog/post/2019-02-12_zookeeper_test/" class="read-more-link">阅读全文</a>
