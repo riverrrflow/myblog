@@ -63,6 +63,6 @@ public class HelloZookeeper extends ConnectionWatcher {
 }
 ```
 
-![](http://ww1.sinaimg.cn/large/6120fe13gy1g06dt64teij21ll0hq771.jpg)
+![](http://ww1.sinaimg.cn/large/6120fe13gy1g07i1slfyij21ll0qftd0.jpg)
 
 
