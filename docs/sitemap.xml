@@ -10,6 +10,13 @@
   </url>
   
   <url>
+    <loc>http://riverrrflow.github.io/myblog/post/2019-02-19_kcptun/</loc>
+    <lastmod>2019-02-19T17:31:10+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://riverrrflow.github.io/myblog/post/2019-02-12_zookeeper_test/</loc>
     <lastmod>2019-02-12T22:45:55+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -143,7 +150,7 @@
   
   <url>
     <loc>http://riverrrflow.github.io/myblog/post/</loc>
-    <lastmod>2019-02-12T22:45:55+08:00</lastmod>
+    <lastmod>2019-02-19T17:31:10+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -170,7 +177,7 @@
   
   <url>
     <loc>http://riverrrflow.github.io/myblog/categories/tool/</loc>
-    <lastmod>2015-11-30T16:01:23+08:00</lastmod>
+    <lastmod>2019-02-19T17:31:10+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>

@@ -30,6 +30,24 @@
     </item>
     
     <item>
+      <title>使用kcptun加速shadowsocks</title>
+      <link>http://riverrrflow.github.io/myblog/post/2019-02-19_kcptun/</link>
+      <pubDate>Tue, 19 Feb 2019 17:31:10 +0800</pubDate>
+      
+      <guid>http://riverrrflow.github.io/myblog/post/2019-02-19_kcptun/</guid>
+      
+        <description>
+
+&lt;h2 id=&#34;kcptun介绍&#34;&gt;kcptun介绍&lt;/h2&gt;
+
+&lt;h2 id=&#34;mac启用kcptun&#34;&gt;mac启用kcptun&lt;/h2&gt;
+
+&lt;h2 id=&#34;安卓手机启用kcptun&#34;&gt;安卓手机启用kcptun&lt;/h2&gt;
+</description>
+      
+    </item>
+    
+    <item>
       <title>zookeeper学习(1)小例子</title>
       <link>http://riverrrflow.github.io/myblog/post/2019-02-12_zookeeper_test/</link>
       <pubDate>Tue, 12 Feb 2019 22:45:55 +0800</pubDate>

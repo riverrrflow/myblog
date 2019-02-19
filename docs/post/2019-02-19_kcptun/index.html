@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>zookeeper学习(1)小例子 - river&#39;s blog</title>
+  <title>使用kcptun加速shadowsocks - river&#39;s blog</title>
   
 
 <meta name="renderer" content="webkit" />
@@ -23,7 +23,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="riverrrflow" />
-  <meta name="description" content="watch小例子： public class ConnectionWatcher implements Watcher { private CountDownLatch connectedSignal = new CountDownLatch(1); private static final int SESSION_TIMEOUT = 5000; protected ZooKeeper zk; public void connect(String hosts) throws InterruptedException, IOException { zk = new ZooKeeper(hosts, SESSION_TIMEOUT, this); connectedSignal.await(); } public void process(WatchedEvent event) { if(event.getState() == Event.KeeperState.SyncConnected) { connectedSignal.countDown(); } } public void close() throws InterruptedException { zk.close(); } } 列出" />
+  <meta name="description" content="kcptun介绍 mac启用kcptun 安卓手机启用kcptun" />
 
 
 
@@ -34,7 +34,7 @@
 <meta name="generator" content="Hugo 0.53" />
 
 
-<link rel="canonical" href="http://riverrrflow.github.io/myblog/post/2019-02-12_zookeeper_test/" />
+<link rel="canonical" href="http://riverrrflow.github.io/myblog/post/2019-02-19_kcptun/" />
 
 
 
@@ -56,26 +56,26 @@
 
 
 
-<meta property="og:title" content="zookeeper学习(1)小例子" />
-<meta property="og:description" content="watch小例子： public class ConnectionWatcher implements Watcher { private CountDownLatch connectedSignal = new CountDownLatch(1); private static final int SESSION_TIMEOUT = 5000; protected ZooKeeper zk; public void connect(String hosts) throws InterruptedException, IOException { zk = new ZooKeeper(hosts, SESSION_TIMEOUT, this); connectedSignal.await(); } public void process(WatchedEvent event) { if(event.getState() == Event.KeeperState.SyncConnected) { connectedSignal.countDown(); } } public void close() throws InterruptedException { zk.close(); } } 列出" />
+<meta property="og:title" content="使用kcptun加速shadowsocks" />
+<meta property="og:description" content="kcptun介绍 mac启用kcptun 安卓手机启用kcptun" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://riverrrflow.github.io/myblog/post/2019-02-12_zookeeper_test/" /><meta property="article:published_time" content="2019-02-12T22:45:55&#43;08:00"/>
-<meta property="article:modified_time" content="2019-02-12T22:45:55&#43;08:00"/>
+<meta property="og:url" content="http://riverrrflow.github.io/myblog/post/2019-02-19_kcptun/" /><meta property="article:published_time" content="2019-02-19T17:31:10&#43;08:00"/>
+<meta property="article:modified_time" content="2019-02-19T17:31:10&#43;08:00"/>
 
-<meta itemprop="name" content="zookeeper学习(1)小例子">
-<meta itemprop="description" content="watch小例子： public class ConnectionWatcher implements Watcher { private CountDownLatch connectedSignal = new CountDownLatch(1); private static final int SESSION_TIMEOUT = 5000; protected ZooKeeper zk; public void connect(String hosts) throws InterruptedException, IOException { zk = new ZooKeeper(hosts, SESSION_TIMEOUT, this); connectedSignal.await(); } public void process(WatchedEvent event) { if(event.getState() == Event.KeeperState.SyncConnected) { connectedSignal.countDown(); } } public void close() throws InterruptedException { zk.close(); } } 列出">
+<meta itemprop="name" content="使用kcptun加速shadowsocks">
+<meta itemprop="description" content="kcptun介绍 mac启用kcptun 安卓手机启用kcptun">
 
 
-<meta itemprop="datePublished" content="2019-02-12T22:45:55&#43;08:00" />
-<meta itemprop="dateModified" content="2019-02-12T22:45:55&#43;08:00" />
-<meta itemprop="wordCount" content="155">
+<meta itemprop="datePublished" content="2019-02-19T17:31:10&#43;08:00" />
+<meta itemprop="dateModified" content="2019-02-19T17:31:10&#43;08:00" />
+<meta itemprop="wordCount" content="31">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="zookeeper学习(1)小例子"/>
-<meta name="twitter:description" content="watch小例子： public class ConnectionWatcher implements Watcher { private CountDownLatch connectedSignal = new CountDownLatch(1); private static final int SESSION_TIMEOUT = 5000; protected ZooKeeper zk; public void connect(String hosts) throws InterruptedException, IOException { zk = new ZooKeeper(hosts, SESSION_TIMEOUT, this); connectedSignal.await(); } public void process(WatchedEvent event) { if(event.getState() == Event.KeeperState.SyncConnected) { connectedSignal.countDown(); } } public void close() throws InterruptedException { zk.close(); } } 列出"/>
+<meta name="twitter:title" content="使用kcptun加速shadowsocks"/>
+<meta name="twitter:description" content="kcptun介绍 mac启用kcptun 安卓手机启用kcptun"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -229,14 +229,14 @@
           <article class="post bg-white">
     
     <header class="post-header">
-      <h1 class="post-title">zookeeper学习(1)小例子</h1>
+      <h1 class="post-title">使用kcptun加速shadowsocks</h1>
       
       <div class="post-meta">
-        <time datetime="2019-02-12" class="post-time">
-          2019-02-12
+        <time datetime="2019-02-19" class="post-time">
+          2019-02-19
         </time>
         <div class="post-category">
-            <a href="http://riverrrflow.github.io/myblog/categories/zookeeper/"> zookeeper </a>
+            <a href="http://riverrrflow.github.io/myblog/categories/tool/"> Tool </a>
             
           </div>
         
@@ -254,68 +254,28 @@
 <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">文章目录</h2>
   <div class="post-toc-content">
-    
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#kcptun介绍">kcptun介绍</a></li>
+<li><a href="#mac启用kcptun">mac启用kcptun</a></li>
+<li><a href="#安卓手机启用kcptun">安卓手机启用kcptun</a></li>
+</ul></li>
+</ul>
+</nav>
   </div>
 </div>
 
     
     <div class="post-content">
-      <p>watch小例子：</p>
+      
 
-<pre><code class="language-java">public class ConnectionWatcher implements Watcher {
-    private CountDownLatch connectedSignal = new CountDownLatch(1);
-    private static final int SESSION_TIMEOUT = 5000;
-    protected ZooKeeper zk;
+<h2 id="kcptun介绍">kcptun介绍</h2>
 
-    public void connect(String hosts) throws InterruptedException, IOException {
-        zk = new ZooKeeper(hosts, SESSION_TIMEOUT, this);
-        connectedSignal.await();
-    }
+<h2 id="mac启用kcptun">mac启用kcptun</h2>
 
-    public void process(WatchedEvent event) {
-        if(event.getState() == Event.KeeperState.SyncConnected) {
-            connectedSignal.countDown();
-        }
-    }
-
-    public void close() throws InterruptedException {
-        zk.close();
-    }
-}
-</code></pre>
-
-<p>列出节点的子节点：</p>
-
-<pre><code class="language-java">public class HelloZookeeper extends ConnectionWatcher {
-
-    public void list(String groupName) throws KeeperException, InterruptedException{
-        String path =&quot;/&quot;+groupName;
-        try {
-            List&lt;String&gt; children = zk.getChildren(path, false);
-            if(children.isEmpty()){
-                System.out.printf(&quot;No memebers in group %s\n&quot;,groupName);
-                System.exit(1);
-            }
-            for(String child : children){
-                System.out.printf(&quot;group = %s, child = %s\n&quot;, groupName, child);
-            }
-        } catch (KeeperException.NoNodeException e) {
-            System.out.printf(&quot;Group %s does not exist!\n&quot;, groupName);
-            System.exit(1);
-        }
-    }
-
-    public static void main(String[] args) throws IOException, InterruptedException, KeeperException {
-        HelloZookeeper helloZookeeper = new HelloZookeeper();
-        helloZookeeper.connect(args[0]);
-        helloZookeeper.list(args[1]);
-        helloZookeeper.close();
-    }
-
-}
-</code></pre>
-
-<p><img src="http://ww1.sinaimg.cn/large/6120fe13gy1g0b086l97lj21tc1ikn5h.jpg" alt="" /></p>
+<h2 id="安卓手机启用kcptun">安卓手机启用kcptun</h2>
 
     </div>
 
@@ -332,22 +292,9 @@
       
       <nav class="post-nav">
         
-          <a class="prev" href="/myblog/post/2019-02-19_kcptun/">
-            
-            <i class="iconfont">
-              <svg  class="icon" viewBox="0 0 1024 1024" version="1.1"
-  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-  width="18" height="18">
-  <path d="M691.908486 949.511495l75.369571-89.491197c10.963703-12.998035 10.285251-32.864502-1.499144-44.378743L479.499795 515.267417 757.434875 204.940602c11.338233-12.190647 11.035334-32.285311-0.638543-44.850487l-80.46666-86.564541c-11.680017-12.583596-30.356378-12.893658-41.662889-0.716314L257.233596 494.235404c-11.332093 12.183484-11.041474 32.266891 0.657986 44.844348l80.46666 86.564541c1.772366 1.910513 3.706415 3.533476 5.750981 4.877077l306.620399 321.703933C662.505829 963.726242 680.945807 962.528973 691.908486 949.511495z"></path>
-</svg>
-
-            </i>
-            <span class="prev-text nav-default">使用kcptun加速shadowsocks</span>
-            <span class="prev-text nav-mobile">上一篇</span>
-          </a>
         
-          <a class="next" href="/myblog/post/2015-12-31-summary2015/">
-            <span class="next-text nav-default">2015年终总结</span>
+          <a class="next" href="/myblog/post/2019-02-12_zookeeper_test/">
+            <span class="next-text nav-default">zookeeper学习(1)小例子</span>
             <span class="prev-text nav-mobile">下一篇</span>
             
             <i class="iconfont">
