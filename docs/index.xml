@@ -38,11 +38,138 @@
       
         <description>
 
+&lt;blockquote&gt;
+&lt;p&gt;换工作之后，所在的公司并没有提供翻墙的支持，故使用aws一年的免费EC2搭了个ss，但在2018年除夕当天服务器的TCP被阻断了，便开始关注ip被封的问题，在&lt;a href=&#34;https://ssr.tools/&#34;&gt;SSR中文网&lt;/a&gt;上找到了不少解决办法，这里主要是使用kcptun的方式，可以防止被墙的同时，还能给网络进行加速。&lt;/p&gt;
+&lt;/blockquote&gt;
+
 &lt;h2 id=&#34;kcptun介绍&#34;&gt;kcptun介绍&lt;/h2&gt;
 
-&lt;h2 id=&#34;mac启用kcptun&#34;&gt;mac启用kcptun&lt;/h2&gt;
+&lt;p&gt;Kcptun是一个基于kcp协议和golang语言开发的跨平台的可靠的数据传输隧道。&lt;/p&gt;
 
-&lt;h2 id=&#34;安卓手机启用kcptun&#34;&gt;安卓手机启用kcptun&lt;/h2&gt;
+&lt;p&gt;kcp则是一个快速可靠协议，能以比 TCP浪费10%-20%的带宽的代价，换取平均延迟降低 30%-40%，且最大延迟降低三倍的传输效果。纯算法实现，并不负责底层协议（如UDP）的收发，需要使用者自己定义下层数据包的发送方式，以 callback的方式提供给 KCP。 连时钟都需要外部传递进来，内部不会有任何一次系统调用。&lt;/p&gt;
+
+&lt;p&gt;直接上&lt;a href=&#34;https://github.com/xtaci/kcptun&#34;&gt;官网&lt;/a&gt;的原理图：
+&lt;img src=&#34;http://ww1.sinaimg.cn/large/6120fe13gy1g0c21va4uej212y0gomxs.jpg&#34; alt=&#34;原理图&#34; /&gt;
+从图中很容易看出，要启用kcptun，需要弄清楚&lt;code&gt;KCP Client&lt;/code&gt;与&lt;code&gt;KCP Server&lt;/code&gt;，以及它们如何与SS客户端和服务器集成。&lt;/p&gt;
+
+&lt;h2 id=&#34;服务器上安装kcptun-server&#34;&gt;服务器上安装kcptun server&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;先ssh到服务器上，执行如下命令：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;wget --no-check-certificate https://github.com/kuoruan/shell-scripts/raw/master/kcptun/kcptun.sh
+chmod +x ./kcptun.sh
+./kcptun.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;第三条命令之后，会出现一系列参数设置选项，大部分直接回车默认即可，少部分需要自己设置的。具体如下：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;端口：默认29900。这是&lt;code&gt;KCP Client&lt;/code&gt;与&lt;code&gt;KCP Server&lt;/code&gt;进行连接所使用的端口，默认即可。&lt;/li&gt;
+&lt;li&gt;要加速的地址：默认127.0.0.1即可。&lt;/li&gt;
+&lt;li&gt;要加速的端口：设置为SS/SSR所使用的端口。&lt;/li&gt;
+&lt;li&gt;密码：自己设置，不要使用默认的。&lt;/li&gt;
+&lt;li&gt;加密方式：默认aes。&lt;/li&gt;
+&lt;li&gt;加速默认：我选的fast。&lt;/li&gt;
+&lt;li&gt;其他选项都选的默认。
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;全部选完之后，&lt;code&gt;KCP Server&lt;/code&gt;便会启动，也会输出客户端和手机端需要使用到的配置。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;执行&lt;code&gt;./kcptun.sh log&lt;/code&gt;即可看日志了。&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;mac客户端上安装kcptun-client&#34;&gt;Mac客户端上安装kcptun client&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;去&lt;a href=&#34;https://github.com/xtaci/kcptun/releases&#34;&gt;Kcptun官网&lt;/a&gt;下载&lt;code&gt;KCP Client&lt;/code&gt;，Mac端下载kcptun-darwin-amd64-20xxxxxx.tar.gz。&lt;/li&gt;
+&lt;li&gt;解压刚下载的压缩文件，会看到&lt;code&gt;client_darwin_amd64&lt;/code&gt;这个文件，后面需要用到。&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;命令行&lt;code&gt;cd /Library/LaunchDaemons/&lt;/code&gt;进入 &lt;code&gt;LaunchDaemons&lt;/code&gt;目录创建plist文件用于自启动，如下：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;
+&amp;lt;!DOCTYPE plist PUBLIC &amp;quot;-//Apple Computer//DTD PLIST 1.0//EN&amp;quot; &amp;quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&amp;quot;&amp;gt;
+&amp;lt;plist version=&amp;quot;1.0&amp;quot;&amp;gt;
+&amp;lt;dict&amp;gt;
+    &amp;lt;key&amp;gt;Label&amp;lt;/key&amp;gt;             
+    &amp;lt;string&amp;gt;local.KcpTunClient&amp;lt;/string&amp;gt;
+    &amp;lt;key&amp;gt;Disabled&amp;lt;/key&amp;gt;          
+    &amp;lt;false/&amp;gt;
+    &amp;lt;key&amp;gt;RunAtLoad&amp;lt;/key&amp;gt;         
+    &amp;lt;true/&amp;gt;
+    &amp;lt;key&amp;gt;KeepAlive&amp;lt;/key&amp;gt;         
+    &amp;lt;false/&amp;gt;
+    &amp;lt;key&amp;gt;LaunchOnlyOnce&amp;lt;/key&amp;gt;    
+    &amp;lt;true/&amp;gt;
+    &amp;lt;key&amp;gt;ProgramArguments&amp;lt;/key&amp;gt;
+    &amp;lt;array&amp;gt;
+        &amp;lt;!-- KcpTun 客户端程序路径 --&amp;gt;
+        &amp;lt;string&amp;gt;/opt/KcpTun/client_darwin_amd64&amp;lt;/string&amp;gt;
+        &amp;lt;string&amp;gt;-r&amp;lt;/string&amp;gt;
+        &amp;lt;!-- KcpTun 服务端 IP:端口 --&amp;gt;
+        &amp;lt;string&amp;gt;1.2.3.4:29900&amp;lt;/string&amp;gt;
+        &amp;lt;string&amp;gt;-l&amp;lt;/string&amp;gt;
+        &amp;lt;!-- 监听的本地端口 --&amp;gt;
+        &amp;lt;string&amp;gt;:2333&amp;lt;/string&amp;gt;
+        &amp;lt;string&amp;gt;-mode&amp;lt;/string&amp;gt;
+        &amp;lt;!-- 加速模式，根据服务端修改 --&amp;gt;
+        &amp;lt;string&amp;gt;fast3&amp;lt;/string&amp;gt;
+        &amp;lt;string&amp;gt;-crypt&amp;lt;/string&amp;gt;
+        &amp;lt;!-- 加密模式，根据服务端修改 --&amp;gt;
+        &amp;lt;string&amp;gt;aes&amp;lt;/string&amp;gt;
+        &amp;lt;string&amp;gt;-key&amp;lt;/string&amp;gt;
+        &amp;lt;!-- 密码，根据服务端修改 --&amp;gt;
+        &amp;lt;string&amp;gt;password&amp;lt;/string&amp;gt;
+    &amp;lt;/array&amp;gt;
+&amp;lt;/dict&amp;gt;
+&amp;lt;/plist&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;直接在&lt;code&gt;LaunchDaemons&lt;/code&gt;目录内执行&lt;code&gt;launchctl load -w local.KcpTunClient.plist&lt;/code&gt;即可，无需&lt;code&gt;sudo&lt;/code&gt;亦可。然后打开活动监视器看看有没有&lt;code&gt;client_darwin_amd64&lt;/code&gt;进程。或者执行&lt;code&gt;ps -ef|grep client_&lt;/code&gt;查看。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;设置Shadowsocks&amp;reg;，如下所示：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;服务器地址：127.0.0.1。&lt;/li&gt;
+&lt;li&gt;端口：第3步中plist设置的本地端口。&lt;/li&gt;
+&lt;li&gt;加密方式：服务器ss的加密方式。&lt;/li&gt;
+&lt;li&gt;密码：服务器ss的密码(非kcptun密码)。
+&lt;img src=&#34;http://ww1.sinaimg.cn/large/6120fe13gy1g0c3yc4ol7j20gg09m756.jpg&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;实际效果对比：使用&lt;a href=&#34;https://beta.speedtest.net&#34;&gt;https://beta.speedtest.net&lt;/a&gt;测试：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;使用kcptun前：
+&lt;img src=&#34;http://ww1.sinaimg.cn/large/6120fe13gy1g0c4mo685pj20jx0fj0u6.jpg&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;li&gt;使用kcptun后：
+&lt;img src=&#34;http://ww1.sinaimg.cn/large/6120fe13gy1g0c4n1vjdxj20mk0frq4b.jpg&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;观看youtobe上的4k视频测试，发现使用kcptun前经常卡顿，下载速度在200KB左右，使用kcptun后很流畅，下载速度稳定在1MB左右。&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;最终的连接图如下：
+&lt;img src=&#34;http://ww1.sinaimg.cn/large/6120fe13gy1g0c4isuyy9j20ol05idfx.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;安卓手机安装kcptun-client&#34;&gt;安卓手机安装kcptun client&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;下载Kcptun安卓apk，下载地址：&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/shadowsocks/kcptun-android/releases&#34;&gt;kcptun-nightly-0.1.0.apk&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;确保在无&lt;code&gt;kcptun&lt;/code&gt;的情况下，&lt;code&gt;Shadowsocks&lt;/code&gt;客户端能正常访问&lt;code&gt;Shadowsocks&lt;/code&gt;服务器。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;断开Shadowsocks连接，在配置界面，拉到最下面。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;点击插件，选择&lt;code&gt;kcptun&lt;/code&gt;，会出现配置界面。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;去服务器上kcptun目录下执行&lt;code&gt;./kcptun.sh show&lt;/code&gt;，查看手机端参数配置，复制粘贴到刚才到配置界面，保存配置。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;重新连接&lt;code&gt;Shadowsocks&lt;/code&gt;服务器。&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
 </description>
       
     </item>

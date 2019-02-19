@@ -23,7 +23,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="riverrrflow" />
-  <meta name="description" content="kcptun介绍 mac启用kcptun 安卓手机启用kcptun" />
+  <meta name="description" content="换工作之后，所在的公司并没有提供翻墙的支持，故使用aws一年的免费EC2搭了个ss，但在2018年除夕当天服务器的TCP被阻断了，便开始关注" />
 
 
 
@@ -57,25 +57,25 @@
 
 
 <meta property="og:title" content="使用kcptun加速shadowsocks" />
-<meta property="og:description" content="kcptun介绍 mac启用kcptun 安卓手机启用kcptun" />
+<meta property="og:description" content="换工作之后，所在的公司并没有提供翻墙的支持，故使用aws一年的免费EC2搭了个ss，但在2018年除夕当天服务器的TCP被阻断了，便开始关注" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://riverrrflow.github.io/myblog/post/2019-02-19_kcptun/" /><meta property="article:published_time" content="2019-02-19T17:31:10&#43;08:00"/>
 <meta property="article:modified_time" content="2019-02-19T17:31:10&#43;08:00"/>
 
 <meta itemprop="name" content="使用kcptun加速shadowsocks">
-<meta itemprop="description" content="kcptun介绍 mac启用kcptun 安卓手机启用kcptun">
+<meta itemprop="description" content="换工作之后，所在的公司并没有提供翻墙的支持，故使用aws一年的免费EC2搭了个ss，但在2018年除夕当天服务器的TCP被阻断了，便开始关注">
 
 
 <meta itemprop="datePublished" content="2019-02-19T17:31:10&#43;08:00" />
 <meta itemprop="dateModified" content="2019-02-19T17:31:10&#43;08:00" />
-<meta itemprop="wordCount" content="31">
+<meta itemprop="wordCount" content="1573">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="使用kcptun加速shadowsocks"/>
-<meta name="twitter:description" content="kcptun介绍 mac启用kcptun 安卓手机启用kcptun"/>
+<meta name="twitter:description" content="换工作之后，所在的公司并没有提供翻墙的支持，故使用aws一年的免费EC2搭了个ss，但在2018年除夕当天服务器的TCP被阻断了，便开始关注"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -259,8 +259,9 @@
 <li>
 <ul>
 <li><a href="#kcptun介绍">kcptun介绍</a></li>
-<li><a href="#mac启用kcptun">mac启用kcptun</a></li>
-<li><a href="#安卓手机启用kcptun">安卓手机启用kcptun</a></li>
+<li><a href="#服务器上安装kcptun-server">服务器上安装kcptun server</a></li>
+<li><a href="#mac客户端上安装kcptun-client">Mac客户端上安装kcptun client</a></li>
+<li><a href="#安卓手机安装kcptun-client">安卓手机安装kcptun client</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -271,11 +272,138 @@
     <div class="post-content">
       
 
+<blockquote>
+<p>换工作之后，所在的公司并没有提供翻墙的支持，故使用aws一年的免费EC2搭了个ss，但在2018年除夕当天服务器的TCP被阻断了，便开始关注ip被封的问题，在<a href="https://ssr.tools/">SSR中文网</a>上找到了不少解决办法，这里主要是使用kcptun的方式，可以防止被墙的同时，还能给网络进行加速。</p>
+</blockquote>
+
 <h2 id="kcptun介绍">kcptun介绍</h2>
 
-<h2 id="mac启用kcptun">mac启用kcptun</h2>
+<p>Kcptun是一个基于kcp协议和golang语言开发的跨平台的可靠的数据传输隧道。</p>
 
-<h2 id="安卓手机启用kcptun">安卓手机启用kcptun</h2>
+<p>kcp则是一个快速可靠协议，能以比 TCP浪费10%-20%的带宽的代价，换取平均延迟降低 30%-40%，且最大延迟降低三倍的传输效果。纯算法实现，并不负责底层协议（如UDP）的收发，需要使用者自己定义下层数据包的发送方式，以 callback的方式提供给 KCP。 连时钟都需要外部传递进来，内部不会有任何一次系统调用。</p>
+
+<p>直接上<a href="https://github.com/xtaci/kcptun">官网</a>的原理图：
+<img src="http://ww1.sinaimg.cn/large/6120fe13gy1g0c21va4uej212y0gomxs.jpg" alt="原理图" />
+从图中很容易看出，要启用kcptun，需要弄清楚<code>KCP Client</code>与<code>KCP Server</code>，以及它们如何与SS客户端和服务器集成。</p>
+
+<h2 id="服务器上安装kcptun-server">服务器上安装kcptun server</h2>
+
+<ol>
+<li><p>先ssh到服务器上，执行如下命令：</p>
+
+<pre><code class="language-shell">wget --no-check-certificate https://github.com/kuoruan/shell-scripts/raw/master/kcptun/kcptun.sh
+chmod +x ./kcptun.sh
+./kcptun.sh
+</code></pre></li>
+
+<li><p>第三条命令之后，会出现一系列参数设置选项，大部分直接回车默认即可，少部分需要自己设置的。具体如下：</p>
+
+<ul>
+<li>端口：默认29900。这是<code>KCP Client</code>与<code>KCP Server</code>进行连接所使用的端口，默认即可。</li>
+<li>要加速的地址：默认127.0.0.1即可。</li>
+<li>要加速的端口：设置为SS/SSR所使用的端口。</li>
+<li>密码：自己设置，不要使用默认的。</li>
+<li>加密方式：默认aes。</li>
+<li>加速默认：我选的fast。</li>
+<li>其他选项都选的默认。
+<br /></li>
+</ul></li>
+
+<li><p>全部选完之后，<code>KCP Server</code>便会启动，也会输出客户端和手机端需要使用到的配置。</p></li>
+
+<li><p>执行<code>./kcptun.sh log</code>即可看日志了。</p></li>
+</ol>
+
+<h2 id="mac客户端上安装kcptun-client">Mac客户端上安装kcptun client</h2>
+
+<ol>
+<li>去<a href="https://github.com/xtaci/kcptun/releases">Kcptun官网</a>下载<code>KCP Client</code>，Mac端下载kcptun-darwin-amd64-20xxxxxx.tar.gz。</li>
+<li>解压刚下载的压缩文件，会看到<code>client_darwin_amd64</code>这个文件，后面需要用到。</li>
+
+<li><p>命令行<code>cd /Library/LaunchDaemons/</code>进入 <code>LaunchDaemons</code>目录创建plist文件用于自启动，如下：</p>
+
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE plist PUBLIC &quot;-//Apple Computer//DTD PLIST 1.0//EN&quot; &quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;
+&lt;plist version=&quot;1.0&quot;&gt;
+&lt;dict&gt;
+    &lt;key&gt;Label&lt;/key&gt;             
+    &lt;string&gt;local.KcpTunClient&lt;/string&gt;
+    &lt;key&gt;Disabled&lt;/key&gt;          
+    &lt;false/&gt;
+    &lt;key&gt;RunAtLoad&lt;/key&gt;         
+    &lt;true/&gt;
+    &lt;key&gt;KeepAlive&lt;/key&gt;         
+    &lt;false/&gt;
+    &lt;key&gt;LaunchOnlyOnce&lt;/key&gt;    
+    &lt;true/&gt;
+    &lt;key&gt;ProgramArguments&lt;/key&gt;
+    &lt;array&gt;
+        &lt;!-- KcpTun 客户端程序路径 --&gt;
+        &lt;string&gt;/opt/KcpTun/client_darwin_amd64&lt;/string&gt;
+        &lt;string&gt;-r&lt;/string&gt;
+        &lt;!-- KcpTun 服务端 IP:端口 --&gt;
+        &lt;string&gt;1.2.3.4:29900&lt;/string&gt;
+        &lt;string&gt;-l&lt;/string&gt;
+        &lt;!-- 监听的本地端口 --&gt;
+        &lt;string&gt;:2333&lt;/string&gt;
+        &lt;string&gt;-mode&lt;/string&gt;
+        &lt;!-- 加速模式，根据服务端修改 --&gt;
+        &lt;string&gt;fast3&lt;/string&gt;
+        &lt;string&gt;-crypt&lt;/string&gt;
+        &lt;!-- 加密模式，根据服务端修改 --&gt;
+        &lt;string&gt;aes&lt;/string&gt;
+        &lt;string&gt;-key&lt;/string&gt;
+        &lt;!-- 密码，根据服务端修改 --&gt;
+        &lt;string&gt;password&lt;/string&gt;
+    &lt;/array&gt;
+&lt;/dict&gt;
+&lt;/plist&gt;
+</code></pre></li>
+
+<li><p>直接在<code>LaunchDaemons</code>目录内执行<code>launchctl load -w local.KcpTunClient.plist</code>即可，无需<code>sudo</code>亦可。然后打开活动监视器看看有没有<code>client_darwin_amd64</code>进程。或者执行<code>ps -ef|grep client_</code>查看。</p></li>
+
+<li><p>设置Shadowsocks&reg;，如下所示：</p>
+
+<ul>
+<li>服务器地址：127.0.0.1。</li>
+<li>端口：第3步中plist设置的本地端口。</li>
+<li>加密方式：服务器ss的加密方式。</li>
+<li>密码：服务器ss的密码(非kcptun密码)。
+<img src="http://ww1.sinaimg.cn/large/6120fe13gy1g0c3yc4ol7j20gg09m756.jpg" alt="" /></li>
+</ul></li>
+
+<li><p>实际效果对比：使用<a href="https://beta.speedtest.net">https://beta.speedtest.net</a>测试：</p>
+
+<ul>
+<li>使用kcptun前：
+<img src="http://ww1.sinaimg.cn/large/6120fe13gy1g0c4mo685pj20jx0fj0u6.jpg" alt="" /></li>
+<li>使用kcptun后：
+<img src="http://ww1.sinaimg.cn/large/6120fe13gy1g0c4n1vjdxj20mk0frq4b.jpg" alt="" /></li>
+</ul></li>
+
+<li><p>观看youtobe上的4k视频测试，发现使用kcptun前经常卡顿，下载速度在200KB左右，使用kcptun后很流畅，下载速度稳定在1MB左右。</p></li>
+</ol>
+
+<p>最终的连接图如下：
+<img src="http://ww1.sinaimg.cn/large/6120fe13gy1g0c4isuyy9j20ol05idfx.jpg" alt="" /></p>
+
+<h2 id="安卓手机安装kcptun-client">安卓手机安装kcptun client</h2>
+
+<ol>
+<li><p>下载Kcptun安卓apk，下载地址：</p>
+
+<p><a href="https://github.com/shadowsocks/kcptun-android/releases">kcptun-nightly-0.1.0.apk</a></p></li>
+
+<li><p>确保在无<code>kcptun</code>的情况下，<code>Shadowsocks</code>客户端能正常访问<code>Shadowsocks</code>服务器。</p></li>
+
+<li><p>断开Shadowsocks连接，在配置界面，拉到最下面。</p></li>
+
+<li><p>点击插件，选择<code>kcptun</code>，会出现配置界面。</p></li>
+
+<li><p>去服务器上kcptun目录下执行<code>./kcptun.sh show</code>，查看手机端参数配置，复制粘贴到刚才到配置界面，保存配置。</p></li>
+
+<li><p>重新连接<code>Shadowsocks</code>服务器。</p></li>
+</ol>
 
     </div>
 
