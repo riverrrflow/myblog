@@ -4,6 +4,7 @@ date: 2015-01-05T16:01:23+08:00
 lastmod: 2015-01-05T16:01:23+08:00
 draft: false
 categories: [Python]
+toc: true
 ---
 
 用了将近3个月的python，也写了一些小程序，前几天看了[廖雪峰的Python教程](http://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000)，感觉写的很不错，故从头到尾看了几遍，摘录其中我认为应该掌握的部分，即为这篇小结。

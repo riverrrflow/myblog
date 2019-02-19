@@ -3,6 +3,7 @@ date: 2015-05-25T16:01:23+08:00
 lastmod: 2015-05-25T16:01:23+08:00
 title: 统计学习方法概述
 categories: [Machine Learning]
+toc: true
 ---
 
 ## 统计学习三要素

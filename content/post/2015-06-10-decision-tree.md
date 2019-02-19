@@ -3,6 +3,7 @@ date: 2015-06-10T16:01:23+08:00
 lastmod: 2015-06-10T16:01:23+08:00
 title: 决策树
 categories: [Machine Learning]
+toc: true
 ---
 
 ## 简介

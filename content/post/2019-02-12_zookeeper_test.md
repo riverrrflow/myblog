@@ -1,9 +1,9 @@
 ---
-title: "2019 02 12_zookeeper_test"
 date: 2019-02-12T22:45:55+08:00
 draft: false
 title: "zookeeper学习(1)小例子"
 categories: [zookeeper]
+toc: true
 ---
 
 watch小例子：

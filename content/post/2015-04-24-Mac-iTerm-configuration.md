@@ -3,6 +3,7 @@ date: 2015-04-24T16:01:23+08:00
 lastmod: 2015-04-24T16:01:23+08:00
 title: Mac下配置iTerm2实现快速远程登录
 categories: [Tool]
+toc: true
 ---
 
 Mac上的神器太多，今天主要讲下如何配置iTerm2终端实现快速远程登录。

@@ -4,6 +4,7 @@ date: 2014-12-29T16:01:23+08:00
 lastmod: 2014-12-29T16:01:23+08:00
 draft: false
 categories: ["Linux"]
+toc: true
 ---
 
 电脑在Ubuntu14.04下发热厉害，网页开多了也经常死机，也差不多该更新换代了，但目前资金不足，便决定再次安装轻量级的[ArchLinux](https://www.archlinux.org/)，鉴于之前失败过一次，这次更加小心了。

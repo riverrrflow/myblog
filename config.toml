@@ -7,6 +7,7 @@ title = "river's blog"
 enableRobotsTXT = true
 enableEmoji = true
 theme = "jane"
+toc = true
 
 publishDir = "docs"
 

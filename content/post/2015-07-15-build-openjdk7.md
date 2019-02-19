@@ -3,6 +3,7 @@ date: 2015-07-10T16:01:23+08:00
 lastmod: 2015-07-10T16:01:23+08:00
 title: Ubuntu14.04编译OpenJDK7
 categories: [JAVA]
+toc: true
 ---
 
 最近在看[深入理解Java虚拟机](http://book.douban.com/subject/6522893/)，第一章有讲到自己编译OpenJDK7，故用Ubuntu14.04实践下。
