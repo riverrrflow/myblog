@@ -147,7 +147,7 @@ chmod +x ./kcptun.sh
 &lt;img src=&#34;http://ww1.sinaimg.cn/large/6120fe13gy1g0c4n1vjdxj20mk0frq4b.jpg&#34; alt=&#34;&#34; /&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;观看youtobe上的4k视频测试，发现使用kcptun前经常卡顿，下载速度在200KB左右，使用kcptun后很流畅，下载速度稳定在1MB左右。&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;观看youtobe上的4k视频测试，发现使用kcptun前经常卡顿，下载速度在200KB/s左右，使用kcptun后很流畅，下载速度稳定在1MB/s左右。&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;最终的连接图如下：
